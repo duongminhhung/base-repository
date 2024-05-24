@@ -33,4 +33,19 @@ abstract class BaseMasterRepository extends BaseRepository implements BaseReposi
         return $this->model->update($attributes);
     }
 
+    public function whereNull($column) {
+        $this->applyCriteria();
+        $this->applyScope();
+        $this->model = $this->model->whereNull($column);
+        return $this;
+    }
+
+    public function whereNotNull($column) {
+        $this->applyCriteria();
+        $this->applyScope();
+        $this->model = $this->model->whereNotNull($column);
+        return $this;
+    }
+
+
 }
