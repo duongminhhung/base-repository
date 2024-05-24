@@ -14,6 +14,9 @@ class HomeController extends Controller
         $this->userRepository = $userRepository;
     }
 
+    /**
+     * @throws RepositoryException
+     */
     public function index(){
         dd($this->userRepository->where(['id'=>1])->get());
         return view('welcome');
