@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
+use Prettus\Repository\Exceptions\RepositoryException;
 
 class HomeController extends Controller
 {
@@ -14,6 +15,7 @@ class HomeController extends Controller
     }
 
     public function index(){
+        dd($this->userRepository->where(['id'=>1])->get());
         return view('welcome');
     }
 }

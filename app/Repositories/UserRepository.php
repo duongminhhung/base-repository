@@ -1,7 +1,7 @@
 <?php
 namespace App\Repositories;
 
-class UserRepository extends BaseCustomRepository {
+class UserRepository extends BaseMasterRepository {
 
     /**
      * Specify Model class name
